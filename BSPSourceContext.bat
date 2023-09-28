@@ -25,7 +25,7 @@ reg add "HKEY_CLASSES_ROOT\SystemFileAssociations\.bsp\shell\decompile" /f /v MU
 reg add "HKEY_CLASSES_ROOT\SystemFileAssociations\.bsp\shell\decompile" /f /v Icon /d "\"%~dp0icon.ico\""
 
 REM Записываем значение в реестр HKEY_CLASSES_ROOT\SystemFileAssociations\.bsp\shell\decompile\command
-reg add "HKEY_CLASSES_ROOT\SystemFileAssociations\.bsp\shell\decompile\command" /f /ve /d "\"%~dp0runtime\bin\java\" -jar \"%~dp0bspsrc.jar\" %%V"
+reg add "HKEY_CLASSES_ROOT\SystemFileAssociations\.bsp\shell\decompile\command" /f /ve /d "\"%~dp0runtime\bin\java\" -jar \"%~dp0bspsrc.jar\" \"%%V\""
 
 REM Всё готово!
 title BSPSourceContext - Installing complete!
